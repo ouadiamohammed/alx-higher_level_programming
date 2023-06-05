@@ -11,7 +11,7 @@ int check_cycle(listint_t *head)
 	listint_t *slow = head;
 	listint_t *fast = head;
 
-	if (head == NULL)
+	if (head == NULL || head->next == NULL)
 		return (0);
 
 	while (fast != NULL && fast->next != NULL)
@@ -19,7 +19,7 @@ int check_cycle(listint_t *head)
 		slow = slow->next;
 		fast = fast->next->next;
 		if (slow == fast)
-			return (1)
+			return (1);
 	}
 	return (0);
 }
