@@ -8,7 +8,7 @@ if number < 0:
 else:
     modulo = number % 10
 
-str = "last digit of {:d} is {:d} and is"
+str = "Last digit of {:d} is {:d} and is"
 if modulo == 0:
     print(str.format(number, modulo) + " 0")
 elif modulo > 5:
