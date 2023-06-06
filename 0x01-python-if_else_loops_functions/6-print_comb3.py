@@ -4,3 +4,4 @@ for nbr1 in range(10):
         print("{:d}{:d}".format(nbr1, nbr2), end="")
         if nbr1 < 8:
             print(", ", end="")
+print()
