@@ -65,7 +65,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
 
-        printable = ""
+        printable = []
         for i in range(self.__height):
             for j in range(self.__width):
                 printable += "#"
