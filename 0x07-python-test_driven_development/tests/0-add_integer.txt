@@ -1,0 +1,43 @@
+===================== Testing Session =============================
+testing the function add_integer
+
+===================== importing the function ======================
+
+    >> add_integer = __import__('0-add_integer').add´_integer
+
+adding 1 and 1
+    >> add_integer(1, 1)
+    2
+
+adding 1.1 and 2
+    >> add_integer(1.1, 1)
+    2
+
+adding two floats
+    >> add_integer(1.1, 2.2)
+    3
+
+adding 2 and 98
+    >> add_integer(1)
+    100
+
+adding char and int
+    >> add_integer('2', 1)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+adding two chars
+    >> add_integer('a', 'b')
+    Traceback (most recent call last):
+    TypeError: a must be and integer
+
+adding an int and a list
+    >> add_integer(5, [])
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+CASE Nan:
+adding an int and a NaN "not a number"
+    >> add_integer(1, float('nan'))
+    Traceback (most recent call last):
+    TypeError: cannot convert float Nan to integer
