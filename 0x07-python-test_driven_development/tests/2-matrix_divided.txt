@@ -1,0 +1,49 @@
+==================== testing starts ===========================
+testing the function matrix_divided
+===================================
+
+=========================== usage =============================
+matrix_divided(matrix, div)
+===========================
+
+Importing function from the module:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+dividing a matrix by 3:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+dividing a matrix by string:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], "Simo")
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+dividing a matrix by 0:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+    Traceback (most recent call last)
+    ZeroDivisionError: division by zero
+
+passing an empty matrix:
+    >>> matrix_divided([], 5)
+    Traceback (most recent call last)
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+passing matrix with different sizes:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6, 7]], 5)
+    Traceback (most recent call last)
+    TypeError: matrix must have each row with the same sizes
+
+passing matrix by str:
+    >>> matrix_divided([[1, 2, 3], [a, b, c]], 2)
+    Traceback (most recent call last)
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+no arguments are passing:
+    >>> matrix_divided()
+    Traceback (most recent call last)
+    TypeError: matrix_divided() missing 2  required positional arguments: 'matrix' and 'div'
+
+2nd argument missing:
+    >> matrix_divided([[1, 2, 3], [4, 5, 6]])
+    Traceback (most recent call last)
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
