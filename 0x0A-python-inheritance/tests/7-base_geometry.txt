@@ -1,0 +1,32 @@
+======================= testing base_geometry =======================
+
+importing class:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+-------------------------------------------------------------
+
+Printing the area
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.area()
+    Traceback (most recent call last):
+    Exception: area() is not impelemented
+
+-------------------------------------------------------------
+
+Non integer argument
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator(""name"", "5")
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+-------------------------------------------------------------
+
+Negative value
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator("name", -1)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+
+-------------------------------------------------------------
+
+
