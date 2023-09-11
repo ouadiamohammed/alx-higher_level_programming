@@ -28,5 +28,3 @@ Negative value
     ValueError: age must be greater than 0
 
 -------------------------------------------------------------
-
-
