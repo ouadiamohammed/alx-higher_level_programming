@@ -2,7 +2,7 @@
 """Class BaseGeometry"""
 
 
-class BaseGeometry():
+class BaseGeometry:
     """class BaseGeometry"""
     def area(self):
         """method still not impelemented"""
