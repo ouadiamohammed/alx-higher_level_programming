@@ -1,7 +1,7 @@
 ===================== testing 1-my_list.py =======================
 
 importing class MyList:
-    >>> MyList = __import__('1-my_list.py').MyList
+    >>> MyList = __import__('1-my_list').MyList
 
 case 1:
 
