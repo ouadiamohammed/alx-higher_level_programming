@@ -1,0 +1,36 @@
+===================== testing 1-my_list.py =======================
+
+importing class MyList:
+    >>> MyList = __import__('1-my_list.py').MyList
+
+case 1:
+
+>>> my_list = MyList()
+>>> my_list.append(5)
+>>> my_list.append(80)
+>>> my_list.append(4)
+>>> my_list.append(0)
+>>> my_list.append(10)
+
+>>> print(my_list)
+[5, 80, 4, 0, 10]
+>>> my_list.print_sorted()
+[0, 4, 5, 10, 80]
+>>> print(my_list)
+[5, 80, 4, 0, 10]
+
+case 2 with negative numbers:
+
+>>> my_list = MyList()
+>>> my_list.append(-5)
+>>> my_list.append(80)
+>>> my_list.append(-4)
+>>> my_list.append(0)
+>>> my_list.append(10)
+
+>>> print(my_list)
+[-5, 80, -4, 0, 10]
+>>> my_list.print_sorted()
+[-5, -4, 0, 10, 80]
+>>> print(my_list)
+[-5, 80, -4, 0, 10]
