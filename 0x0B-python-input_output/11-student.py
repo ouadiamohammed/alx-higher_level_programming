@@ -17,4 +17,5 @@ class Student:
         return self.__dict__
 
     def reload_from_json(self, json):
-        self.__dir__.update(json)
+        for key, v in json.items():
+            setattr(self, key, v)
