@@ -3,7 +3,7 @@
 import json
 import sys
 
-save_tp_json_file = __import__('5-save_to_json_file').save_to_json_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 list = []
@@ -18,4 +18,4 @@ finally:
         if arg == sys.argv[0]:
             continue
         list.append(arg)
-    save_tp_json_file(list, filename)
+    save_to_json_file(list, filename)
