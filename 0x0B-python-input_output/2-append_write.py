@@ -5,5 +5,5 @@
 def append_write(filename="", text=""):
     """adds string to already existing file"""
 
-    with open(filename, mode="a", encoding="uft-8") as file:
+    with open(filename, mode="a", encoding="utf-8") as file:
         return (file.write(text))
