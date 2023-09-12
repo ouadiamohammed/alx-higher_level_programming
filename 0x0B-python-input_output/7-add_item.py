@@ -1,20 +1,19 @@
 #!/usr/bin/python3
-""" module """
+"""add_items module"""
 import json
 import sys
+import os.path
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-mylist = []
 
-try:
-    filename = "add_item.json"
-    mylist = load_from_json_file(filename)
-except (FileNotFoundError, json.decoder.JSONDecodeError):
-    pass
-finally:
-    for arg in sys.argv:
-        if arg == sys.argv[0]:
-            continue
-        mylist.append(arg)
-    save_to_json_file(mylist, filename)
+mylist = []
+file = "add_item.json"
+
+if os.path.exists(file):
+    mylist = load_from_json_file(file)
+
+for i in range(1, len(sys.argv)):
+    mylist.append(sys.argv[i])
+
+save_to_json_file(mylist, file)
