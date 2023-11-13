@@ -7,6 +7,10 @@ function factorial (n) {
   }
 }
 
-const number = parseInt(process.argv[2], 10);
+const number = Number(process.argv[2]);
 
-console.log(factorial(number));
+if (Number.isNaN(number)) {
+  console.log(1);
+} else {
+  console.log(factorial(number));
+}
